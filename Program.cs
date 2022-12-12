@@ -215,9 +215,10 @@ switch(Task){
         } 
         return yes; 
     }
-
-    Console.Write("Введите четное число от 4 до 998:  ");
-    int UserNumber = int.Parse(Console.ReadLine());
+    int z = 0;
+    while (z < 10){
+    //Console.Write("Введите четное число от 4 до 998:  ");
+    int UserNumber = new Random().Next(1, 499) * 2;//int.Parse(Console.ReadLine());
     int PrimeNumber1 = 0, PrimeNumber2 = 0;
     bool yes = false;
 
@@ -234,7 +235,8 @@ switch(Task){
         else Console.WriteLine($"{PrimeNumber2} + {PrimeNumber1} = {UserNumber}");
     }
     else Console.WriteLine($"{UserNumber} - С этим число ничего не получилось");
-
+    z++;
+    }
     break;
 
     case 10:
